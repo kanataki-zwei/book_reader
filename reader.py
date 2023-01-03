@@ -12,6 +12,6 @@ pages = len(Reader.pages)
 read_out = pyttsx3.init()
 
 for num in range(1, pages):
-    page = Reader.pages(num)
-    text = page.extractText()
+    page = Reader.pages[num]
+    text = page.extract_text()
     read_out.say(text)
